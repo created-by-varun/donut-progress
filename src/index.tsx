@@ -84,6 +84,7 @@ const DonutProgress = ({
         height={radius * 2}
         width={radius * 2}
         viewBox={`0 0 ${halfCircle * 2} ${halfCircle * 2}`}>
+        {/* @ts-ignore */}
         <G rotation={-90 + rotation} origin={`${halfCircle}, ${halfCircle}`}>
           <Circle
             ref={circleRef}
@@ -110,16 +111,16 @@ const DonutProgress = ({
         </G>
       </Svg>
       {fraction ? (
-        <View style={[StyleSheet.absoluteFillObject, { flexDirection:"row", alignItems:"center", justifyContent:"center"}]}>
+        <View style={[StyleSheet.absoluteFillObject, { flexDirection: "row", alignItems: "center", justifyContent: "center" }]}>
           <AnimatedTextInput
             ref={inputRef}
             underlineColorAndroid="transparent"
             editable={false}
             defaultValue="0"
-            style={{ fontSize: fontSize*1.2, color: textColor ?? color, fontWeight: fontWeight, textAlign: 'center',top:-15}}
+            style={{ fontSize: fontSize * 1.2, color: textColor ?? color, fontWeight: fontWeight, textAlign: 'center', top: -15 }}
           />
-          <Text style={{fontSize:fontSize*1.5, fontWeight: fontWeight, textAlign: 'center',top:0 }}>/</Text>
-          <Text style={{ fontSize: fontSize*1.2, fontWeight: fontWeight, textAlign: 'center', top:15 }}>
+          <Text style={{ fontSize: fontSize * 1.5, fontWeight: fontWeight, textAlign: 'center', top: 0 }}>/</Text>
+          <Text style={{ fontSize: fontSize * 1.2, fontWeight: fontWeight, textAlign: 'center', top: 15 }}>
             {max}
           </Text>
         </View>
