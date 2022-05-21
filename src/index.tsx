@@ -27,7 +27,7 @@ const DonutProgress = ({
   radius = 40,
   strokeWidth = 10,
   duration = 500,
-  color = "tomato",
+  color = "#3A50CF",
   delay = 500,
   textColor,
   max = 100,
@@ -110,16 +110,16 @@ const DonutProgress = ({
         </G>
       </Svg>
       {fraction ? (
-        <View style={[StyleSheet.absoluteFillObject, { alignItems: 'center', justifyContent: 'center' }]}>
+        <View style={[StyleSheet.absoluteFillObject, { flexDirection:"row", alignItems:"center", justifyContent:"center"}]}>
           <AnimatedTextInput
             ref={inputRef}
             underlineColorAndroid="transparent"
             editable={false}
             defaultValue="0"
-            style={{ fontSize: fontSize, color: textColor ?? color, fontWeight: fontWeight, textAlign: 'center' }}
+            style={{ fontSize: fontSize*1.2, color: textColor ?? color, fontWeight: fontWeight, textAlign: 'center',top:-15}}
           />
-          <Text style={{ fontSize: fontSize, color: textColor ?? color, fontWeight: fontWeight, textAlign: 'center' }}>/</Text>
-          <Text style={{ fontSize: fontSize, color: textColor ?? color, fontWeight: fontWeight, textAlign: 'center' }}>
+          <Text style={{fontSize:fontSize*1.5, fontWeight: fontWeight, textAlign: 'center',top:0 }}>/</Text>
+          <Text style={{ fontSize: fontSize*1.2, fontWeight: fontWeight, textAlign: 'center', top:15 }}>
             {max}
           </Text>
         </View>
