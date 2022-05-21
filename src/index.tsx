@@ -1,3 +1,13 @@
-export function multiply(a: number, b: number): Promise<number> {
-  return Promise.resolve(a * b);
+import * as React from 'react';
+
+import { StyleSheet, View, Text } from 'react-native';
+
+const DonutProgress = () => {
+  return(
+    <View>
+      <Text>Hello</Text>
+    </View>
+  )
 }
+
+export default DonutProgress;
