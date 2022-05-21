@@ -14,7 +14,7 @@ interface IProps {
   textColor?: string;
   max?: number;
   fontSize?: number;
-  fontWeight?: string;
+  fontWeight?: any;
   bgStrokeOpacity?: string;
   rotation?: number;
   appendText?: string;
