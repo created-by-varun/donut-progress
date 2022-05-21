@@ -8,7 +8,7 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <DonutProgress appendText="%" fontSize={30} radius={100} strokeWidth={10} duration={1500} percentage={86} max={100} />
+      <DonutProgress color='cyan' appendText="%" edgeCurved fontSize={30} radius={100} strokeWidth={10} duration={1500} percentage={86} max={100} />
     </View>
   );
 }
@@ -18,5 +18,6 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
+    backgroundColor:'black'
   }
 });

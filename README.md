@@ -1,6 +1,6 @@
-# donut-progress
+# donut-progress-react-native
 
-Donut progress chart for react native
+An animated donut progress chart for react native
 
 ## Installation
 
@@ -11,8 +11,17 @@ npm install donut-progress
 ## Usage
 
 ```js
-<DonutProgress appendText='%' fontSize={50} radius={100} strokeWidth={10} duration={1500} percentage={76} max={100} />
-
+<DonutProgress 
+    color='cyan' 
+    appendText="%" 
+    edgeCurved 
+    fontSize={30} 
+    radius={100} 
+    strokeWidth={10} 
+    duration={1500} 
+    percentage={86} 
+    max={100} 
+/>
 ```
 
 ## Contributing
