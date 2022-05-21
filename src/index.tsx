@@ -110,12 +110,7 @@ const DonutProgress = ({
         </G>
       </Svg>
       {fraction ? (
-        <View style={
-          [
-            StyleSheet.absoluteFillObject,
-            { fontSize: fontSize, color: textColor ?? color, fontWeight: fontWeight, textAlign: 'center' },
-          ]
-        }>
+        <View style={[StyleSheet.absoluteFillObject, { alignItems: 'center', justifyContent: 'center' }]}>
           <AnimatedTextInput
             ref={inputRef}
             underlineColorAndroid="transparent"
