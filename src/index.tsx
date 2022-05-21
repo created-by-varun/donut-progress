@@ -116,9 +116,10 @@ const DonutProgress = ({
             underlineColorAndroid="transparent"
             editable={false}
             defaultValue="0"
+            style={{ fontSize: fontSize / 2, color: textColor ?? color, fontWeight: fontWeight, textAlign: 'center' }}
           />
-          <Text>/</Text>
-          <Text>
+          <Text style={{ fontSize: fontSize / 2, color: textColor ?? color, fontWeight: fontWeight, textAlign: 'center' }}>/</Text>
+          <Text style={{ fontSize: fontSize / 2, color: textColor ?? color, fontWeight: fontWeight, textAlign: 'center' }}>
             {max}
           </Text>
         </View>
