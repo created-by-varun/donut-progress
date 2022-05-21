@@ -11,11 +11,8 @@ npm install donut-progress
 ## Usage
 
 ```js
-import { multiply } from "donut-progress";
+<DonutProgress fraction fontSize={30} radius={100} strokeWidth={10} duration={1500} percentage={76} max={100} />
 
-// ...
-
-const result = await multiply(3, 7);
 ```
 
 ## Contributing
