@@ -1,0 +1,22 @@
+{
+  "name": "donut-progress-example",
+  "displayName": "DonutProgress Example",
+  "expo": {
+    "name": "donut-progress-example",
+    "slug": "donut-progress-example",
+    "description": "Example app for donut-progress",
+    "privacy": "public",
+    "version": "1.0.0",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
