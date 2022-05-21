@@ -71,12 +71,12 @@ const DonutProgress = ({
           strokeDashoffset,
         });
       }
-    }, [max, percentage]);
+    });
 
     return () => {
       animated.removeAllListeners();
     };
-  });
+  }, [max, percentage]);
 
   return (
     <View style={{ width: radius * 2, height: radius * 2 }}>
