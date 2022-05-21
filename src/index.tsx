@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useEffect } from 'react';
 import { Easing, TextInput, Animated, View, StyleSheet, Text } from 'react-native';
 import Svg, { G, Circle } from 'react-native-svg';
 
@@ -41,8 +41,8 @@ const DonutProgress = ({
 }: IProps) => {
 
   const animated = React.useRef(new Animated.Value(0)).current;
-  const circleRef = React.useRef();
-  const inputRef = React.useRef();
+  const circleRef = React.useRef<any>();
+  const inputRef = React.useRef<any>();
   const circumference = 2 * Math.PI * radius;
   const halfCircle = radius + strokeWidth;
 
@@ -56,7 +56,7 @@ const DonutProgress = ({
     }).start();
   };
 
-  React.useEffect(() => {
+  useEffect(() => {
     animation(percentage);
     animated.addListener((v) => {
       const maxPerc = 100 * v.value / max;
