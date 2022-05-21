@@ -19,7 +19,9 @@ interface IProps {
   rotation?: number;
   appendText?: string;
   edgeCurved?: boolean;
-  fraction?: boolean
+  fraction?: boolean;
+  secondaryColor?:string
+  barColor?:string
 };
 
 const DonutProgress = ({
@@ -38,6 +40,8 @@ const DonutProgress = ({
   appendText = '',
   edgeCurved = false,
   fraction = false,
+  secondaryColor = color,
+  barColor = color,
 }: IProps) => {
 
   const animated = React.useRef(new Animated.Value(0)).current;
@@ -119,8 +123,8 @@ const DonutProgress = ({
             defaultValue="0"
             style={{ fontSize: fontSize * 1.2, color: textColor ?? color, fontWeight: fontWeight, textAlign: 'center', top: -15 }}
           />
-          <Text style={{ fontSize: fontSize * 1.5, fontWeight: fontWeight, textAlign: 'center', top: 0 }}>/</Text>
-          <Text style={{ fontSize: fontSize * 1.2, fontWeight: fontWeight, textAlign: 'center', top: 15 }}>
+          <Text style={{ fontSize: fontSize * 1.5, fontWeight: fontWeight, textAlign: 'center', top: 0,color:barColor }}>/</Text>
+          <Text style={{ fontSize: fontSize * 1.2, fontWeight: fontWeight, textAlign: 'center', top: 15,color:secondaryColor }}>
             {max}
           </Text>
         </View>
