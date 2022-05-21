@@ -121,10 +121,10 @@ const DonutProgress = ({
             underlineColorAndroid="transparent"
             editable={false}
             defaultValue="0"
-            style={{ fontSize: fontSize * 1.2, color: textColor ?? color, fontWeight: fontWeight, textAlign: 'center', top: -15 }}
+            style={{ fontSize: fontSize, color: textColor ?? color, fontWeight: fontWeight, textAlign: 'center', top: "-6%" }}
           />
-          <Text style={{ fontSize: fontSize * 1.5, fontWeight: fontWeight, textAlign: 'center', top: 0,color:barColor }}>/</Text>
-          <Text style={{ fontSize: fontSize * 1.2, fontWeight: fontWeight, textAlign: 'center', top: 15,color:secondaryColor }}>
+          <Text style={{ fontSize: fontSize , fontWeight: fontWeight, textAlign: 'center',color:barColor }}>/</Text>
+          <Text style={{ fontSize: fontSize, fontWeight: fontWeight, textAlign: 'center', top: "9%",color:secondaryColor }}>
             {max}
           </Text>
         </View>
