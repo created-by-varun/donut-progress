@@ -1,12 +1,14 @@
 # donut-progress-react-native
 
-An animated donut progress chart for react native
+A highly customisable animated donut progress chart for react native
 
 ## Installation
 
 ```sh
 npm install donut-progress
 ```
+
+![](./assets/donut-progress.GIF)
 
 ## Usage
 
