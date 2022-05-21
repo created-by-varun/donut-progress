@@ -8,7 +8,7 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <DonutProgress />
+      <DonutProgress appendText='%' fontSize={50} radius={100} strokeWidth={10} duration={1500} percentage={76} max={100} />
     </View>
   );
 }
@@ -16,12 +16,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
     justifyContent: 'center',
-  },
-  box: {
-    width: 60,
-    height: 60,
-    marginVertical: 20,
-  },
+    alignItems: 'center',
+  }
 });

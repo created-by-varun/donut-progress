@@ -143,5 +143,9 @@
         }
       ]
     ]
+  },
+  "dependencies": {
+    "react-native-reanimated": "^2.8.0",
+    "react-native-svg": "^12.3.0"
   }
 }
