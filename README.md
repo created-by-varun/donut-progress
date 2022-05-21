@@ -11,7 +11,7 @@ npm install donut-progress
 ## Usage
 
 ```js
-<DonutProgress fraction fontSize={30} radius={100} strokeWidth={10} duration={1500} percentage={76} max={100} />
+<DonutProgress appendText='%' fontSize={50} radius={100} strokeWidth={10} duration={1500} percentage={76} max={100} />
 
 ```
 
