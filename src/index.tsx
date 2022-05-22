@@ -17,6 +17,7 @@ interface IProps {
   fontWeight?: any;
   bgStrokeOpacity?: string;
   rotation?: number;
+  prependText?: string;
   appendText?: string;
   edgeCurved?: boolean;
   fraction?: boolean;
@@ -37,6 +38,7 @@ const DonutProgress = ({
   fontWeight = '500',
   bgStrokeOpacity = '0.2',
   rotation = 0,
+  prependText='',
   appendText = '',
   edgeCurved = true,
   fraction = false,
@@ -67,7 +69,7 @@ const DonutProgress = ({
       const strokeDashoffset = circumference - (circumference * maxPerc) / 100;
       if (inputRef?.current) {
         inputRef.current.setNativeProps({
-          text: `${Math.round(v.value)} ${appendText}`,
+          text: `${prependText} ${Math.round(v.value)} ${appendText}`,
         });
       }
       if (circleRef?.current) {
