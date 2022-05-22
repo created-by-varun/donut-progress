@@ -20,28 +20,28 @@ interface IProps {
   appendText?: string;
   edgeCurved?: boolean;
   fraction?: boolean;
-  secondaryColor?:string
-  barColor?:string
+  secondaryColor?: string
+  barColor?: string
 };
 
 const DonutProgress = ({
   percentage = 75,
+  max = 100,
   radius = 40,
   strokeWidth = 10,
   duration = 500,
-  color = "#3A50CF",
   delay = 500,
-  textColor,
-  max = 100,
+  color = "#3A50CF",
+  textColor = color,
   fontSize = radius / 2,
   fontWeight = '500',
-  bgStrokeOpacity = '0.1',
+  bgStrokeOpacity = '0.2',
   rotation = 0,
   appendText = '',
-  edgeCurved = false,
+  edgeCurved = true,
   fraction = false,
-  secondaryColor = color,
-  barColor = color,
+  secondaryColor = textColor,
+  barColor = textColor,
 }: IProps) => {
 
   const animated = React.useRef(new Animated.Value(0)).current;
@@ -123,8 +123,8 @@ const DonutProgress = ({
             defaultValue="0"
             style={{ fontSize: fontSize, color: textColor ?? color, fontWeight: fontWeight, textAlign: 'center', top: "-6%" }}
           />
-          <Text style={{ fontSize: fontSize , fontWeight: fontWeight, textAlign: 'center',color:barColor }}>/</Text>
-          <Text style={{ fontSize: fontSize, fontWeight: fontWeight, textAlign: 'center', top: "9%",color:secondaryColor }}>
+          <Text style={{ fontSize: fontSize, fontWeight: fontWeight, textAlign: 'center', color: barColor }}>/</Text>
+          <Text style={{ fontSize: fontSize, fontWeight: fontWeight, textAlign: 'center', top: "9%", color: secondaryColor }}>
             {max}
           </Text>
         </View>
